@@ -15,29 +15,25 @@
   pageRef = "posts"
   weight = 10
 
-#[[main]]
-#  name = "Examples"
-#  weight = 20
+# [[main]]
+#   name = "樣品"
+#   pageRef = "samples"
+#   weight = 20
 
-[[main]]
-  name = "樣品"
-  pageRef = "samples"
-  weight = 20
+# [[main]]
+#   name = "展示櫃"
+#   pageRef = "examples"
+#   weight = 30
 
-[[main]]
-  name = "展示櫃"
-  pageRef = "examples"
-  weight = 30
+# [[main]]
+#   name = "食譜"
+#   pageRef = "guides"
+#   weight = 40
 
-[[main]]
-  name = "食譜"
-  pageRef = "guides"
-  weight = 40
-
-[[main]]
-  name = "用戶"
-  pageRef = "users"
-  weight = 90
+# [[main]]
+#   name = "用戶"
+#   pageRef = "users"
+#   weight = 90
 
 #[[main]]
 #  name = "Merch"
