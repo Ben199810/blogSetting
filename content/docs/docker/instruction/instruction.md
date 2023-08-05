@@ -1,18 +1,10 @@
 ---
 title: "Docker 指令"
-date: 2023-07-30
+date: 2020-07-30
 draft: false
-
-showDate : false
-showDateUpdated : false
-showHeadingAnchors : false
-showPagination : false
-showReadingTime : false
-showTableOfContents : true
-showTaxonomies : false 
-showWordCount : false
-showSummary : false
-sharingLinks : false
+description: "docker 常用指令筆記"
+# slug: "advanced-customisation"
+tags: ["docker",]
 
 ---
 ## 匯出/入映像檔
