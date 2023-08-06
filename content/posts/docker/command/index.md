@@ -3,8 +3,7 @@ title: "Docker 指令"
 date: 2020-07-30
 draft: false
 description: "docker 常用指令筆記"
-# slug: "advanced-customisation"
-tags: ["docker",]
+tags: ["docker"]
 
 ---
 ## 匯出/入映像檔
