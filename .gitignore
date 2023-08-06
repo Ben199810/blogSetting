@@ -27,3 +27,4 @@ node_modules
 
 # blog public filesDir
 public/
+resources/_gen/
