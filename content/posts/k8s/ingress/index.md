@@ -3,7 +3,7 @@ title: "Ingress"
 date: 2020-08-06
 draft: false
 description: "k8s ingress"
-tags: ["k8s"]
+tags: ["k8s", "ingress"]
 
 ---
 ## 介紹 ingress 
@@ -56,3 +56,13 @@ df-backend -.-> svc-api
 
 end
 {{< /mermaid >}}
+
+## 內部負載平衡
+講完了外部負載平衡，接著講 ingress 擔任內部負載平衡時，需要注意的事項。
+
+### Network endpoint group
+什麼是 NEG ?
+
+NEG 是指 Network endpoint group，是一種配置。意思是指定一組後端 endpoint 或 service，借助NEG，Google Cloud 負載均衡器可以為基於 GCE 的工作負載、無服務器工作負載和容器化工作負載提供服務。可以更精細的將流量分配到負載均衡器的後端。
+
+使用時，對後端的 service 必須要使用 NEG，詳細想要了解可以參考 :point_right: [Network endpoint groups overview](https://cloud.google.com/load-balancing/docs/negs)
