@@ -1,6 +1,6 @@
 ---
 title: "Ingress"
-date: 2020-08-06
+date: 2023-08-06
 draft: false
 description: "k8s ingress"
 tags: ["k8s", "ingress"]
