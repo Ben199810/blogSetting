@@ -12,7 +12,7 @@
 
 [[main]]
   name = "文章"
-  pageRef = "docs"
+  pageRef = "posts"
   weight = 10
 
 # [[main]]
@@ -48,19 +48,19 @@
 [[main]]
   identifier = "twitter"
   pre = "twitter"
-  url = "https://twitter.com/burufugu"
+  url = "https://twitter.com/laiben186118"
   weight = 200
 
-[[main]]
-  identifier = "mastodon"
-  pre = "mastodon"
-  url = "https://masto.ai/@blowfish"
-  weight = 300
+# [[main]]
+#   identifier = "mastodon"
+#   pre = "mastodon"
+#   url = "https://masto.ai/@blowfish"
+#   weight = 300
 
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/BingweiLai"
   weight = 400
 
 
@@ -73,7 +73,7 @@
    pageRef = "tags"
    weight = 10
 
- [[footer]]
-   name = "作者"
-   pageRef = "authors"
-   weight = 20
+#  [[footer]]
+#    name = "作者"
+#    pageRef = "authors"
+#    weight = 20

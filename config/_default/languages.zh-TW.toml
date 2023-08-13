@@ -19,9 +19,9 @@ title = "Bing-wei's Blog"
   headline = "千里之行，始於足下。"
   bio = "畢業後，進入 devops 領域。目前擔任 SRE 工程師。"
   links = [
-    { twitter = "https://twitter.com/burufugu" },
-    { mastodon = "https://masto.ai/@blowfish" },
-    { github = "https://github.com/nunocoracao/blowfish" },
+    { twitter = "https://twitter.com/laiben186118" },
+    # { mastodon = "https://masto.ai/@blowfish" },
+    { github = "https://github.com/BingweiLai" },
   ]
 
   
