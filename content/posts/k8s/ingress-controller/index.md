@@ -1,7 +1,7 @@
 ---
 title: "Ingress Controller 簡介"
 date: 2023-08-19
-draft: true
+draft: false
 description: "k8s ingress controller 簡單介紹與安裝"
 tags: ["k8s", "ingress"]
 
