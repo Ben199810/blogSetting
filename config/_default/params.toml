@@ -18,7 +18,7 @@ mainSections = ["posts"]
 disableImageOptimization = false
 
 defaultBackgroundImage = "/img/starry-sky.jpeg"
-defaultFeaturedImage = "/img/starry-sky.jpeg"
+defaultFeaturedImage = "/img/devops.png"
 
 highlightCurrentMenuArea = true
 smartTOC = true
