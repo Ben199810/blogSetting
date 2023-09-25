@@ -17,8 +17,7 @@
 
 [[main]]
   name = "日誌"
-  pageRef = "journal"
-  # pageRef = "samples"
+  pageRef = "journals"
   weight = 20
 
 # [[main]]
