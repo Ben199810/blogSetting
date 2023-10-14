@@ -34,25 +34,25 @@ armor 的翻譯是指盔甲的意思，這是由 gcp 提供的服務，具有分
 {{< mermaid >}}
 flowchart LR
 
-cli1(client 34.41.26.173)
-cli2(client 114.1.46.157)
+  cli1(client 34.41.26.173)
+  cli2(client 114.1.46.157)
 
-cli1 --> ing
-cli2 --x ing
+  cli1 --> ing
+  cli2 --x ing
 
 subgraph k8s-cluster
 
-ing((ingress))
-svc-web(web-service)
-svc-api(api-service)
-df-backend(backend-config)
-armor{{cloud-armor}}
+  ing((ingress))
+  svc-web(web-service)
+  svc-api(api-service)
+  df-backend(backend-config)
+  armor{{cloud-armor}}
 
-ing --> svc-web
-ing --> svc-api
-armor -.- df-backend
-df-backend -.-> svc-web
-df-backend -.-> svc-api
+  ing --> svc-web
+  ing --> svc-api
+  armor -.- df-backend
+  df-backend -.-> svc-web
+  df-backend -.-> svc-api
 
 end
 {{< /mermaid >}}
