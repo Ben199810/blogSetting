@@ -1,7 +1,7 @@
 ---
 title: "跨區域內部負載網路時遇到無法連線"
 date: 2023-11-08
-draft: true
+draft: false
 description: "紀錄 SR 提供的 annotions"
 ---
 
@@ -22,3 +22,49 @@ description: "紀錄 SR 提供的 annotions"
 ![](/img/k8s/journals/svc-id-2.png)
 
 ## k8s Setting
+
+那一定要手動去設定嗎？還有 SVC 的設定要是變動了，`全域存取權 設定會不會失效呢？
+
+:warning: 經過測試發現，如果更動 SVC 的 loadBalance 的白名單設定的話，如果你只有用手動去設定，那 `全域存取權` 就會失效，因此我們必須把這項設定寫在 k8s Yaml 上面才是最有效的
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: agent-gateway-ingress-nginx-controller-internal
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: agent-gateway
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/version: 1.9.1
+    helm.sh/chart: ingress-nginx-4.8.1
+  annotations:
+    meta.helm.sh/release-name: agent-gateway
+    meta.helm.sh/release-namespace: ingress-nginx
+    networking.gke.io/load-balancer-type: Internal
+    # 全域內部負載平衡存取設定
+    networking.gke.io/internal-load-balancer-allow-global-access: "true"
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http
+      nodePort: 31669
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: https
+      nodePort: 30961
+  selector:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: agent-gateway
+    app.kubernetes.io/name: ingress-nginx
+  type: LoadBalancer
+  loadBalancerIP: 10.1.5.16
+  loadBalancerSourceRanges:
+    - 10.0.0.0/8
+```
