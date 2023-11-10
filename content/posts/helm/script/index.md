@@ -1,7 +1,7 @@
 ---
 title: "helm - 強而有力的管理 k8s "
 date: 2023-11-10
-draft: true
+draft: false
 description: "介紹 helm and 常用實用的指令"
 tags: ["k8s", "helm"]
 ---
