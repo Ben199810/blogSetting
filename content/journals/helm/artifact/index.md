@@ -1,7 +1,7 @@
 ---
 title: "helm 使用 gcp artifact registry 存放 chart"
 date: 2023-11-10
-draft: true
+draft: false
 description: "helm 打包好的 chart 如何配合 gcp artifact registry 存放"
 tags: ["helm", "gcp"]
 ---
