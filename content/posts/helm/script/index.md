@@ -71,9 +71,17 @@ serverPort: 80
 * helm intall/upgrade 使用 --set 或 --set-string 傳遞的參數
 
 ## 常用指令
+
+### 一般自訂 Chart 安裝
 :star: **debug**：輸出安裝過程中的詳細資訊 :star: **dry-run**：預覽安裝過程 :star: **atomic**：更新過程中有任何一步驟失敗，回滾到先前狀態
 ```shell
 helm upgrade --intstall --debug --dry-run [RELEASE_NAME] [CHART_PATH] --atomic
+```
+
+### 本機 repo 安裝
+:star: **version**：指定安裝版本
+```shell
+helm install [RELEASE_NAME] [REPO_NAME]/[CHART_NAME] --version [VERSION]
 ```
 
 ### 列出已安裝 Release
@@ -83,7 +91,7 @@ helm list
 
 ### 新增 Chart Repo
 ```shell
-helm repo add [repo name] [URL]
+helm repo add [REPO_NAME] [URL]
 ```
 
 ### 列出 Chart Repo List
@@ -103,7 +111,7 @@ helm search repo [search_keyword]
 
 ### 查看 Chart 詳細版本
 ```shell
-helm search repo [repo name] --versions
+helm search repo [REPO_NAME] --versions
 ```
 
 ### 查看 releases 歷史版本
