@@ -53,3 +53,7 @@ helm repo add gitlab https://charts.gitlab.io
 # CONFIG_VALUES_FILE -> 更換 values.yaml
 helm install --namespace [NAMESPACE] gitlab-runner -f [CONFIG_VALUES_FILE] gitlab/gitlab-runner
 ```
+
+完成後，從 kubectl get pod | grep gitlab-runner 就能看到 gitlab-runner 已經部署成功了！
+
+而當你回到 Gitlab > Settings > CI/CD ，你也會看到 Specific Runner 掛載了一個 Runner 了。
