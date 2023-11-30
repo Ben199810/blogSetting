@@ -20,10 +20,10 @@
   pageRef = "journals"
   weight = 20
 
-# [[main]]
-#   name = "展示櫃"
-#   pageRef = "examples"
-#   weight = 30
+[[main]]
+  pageRef = "author"
+  name = "關於我"
+  weight = 30
 
 # [[main]]
 #   name = "食譜"

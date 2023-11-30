@@ -122,16 +122,16 @@ smartTOCHideUnfocusedChildren = true
   appId = "1:60108104191:web:039842ebe1370698b487ca"
   measurementId = "G-PEDMYR1V0K"
 
-[fathomAnalytics]
+# [fathomAnalytics]
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
-[buymeacoffee]
-  identifier = "nunocoracao"
-  globalWidget = true
-  globalWidgetMessage = ""
-  globalWidgetColor = "#FFDD00"
-  globalWidgetPosition = "Right"
+# [buymeacoffee]
+#   identifier = "nunocoracao"
+#   globalWidget = true
+#   globalWidgetMessage = ""
+#   globalWidgetColor = "#FFDD00"
+#   globalWidgetPosition = "Right"
 
 [verification]
   # google = ""
