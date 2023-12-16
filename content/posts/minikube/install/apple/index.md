@@ -24,7 +24,7 @@ QEMU 是一種模擬器，它能夠完成使用者程式模擬和系統虛擬化
 
 沒錯，可能有讀者發現了重點，因為 m1 與 m2 是 `ARM` 架構，因此可以使用 Qemu 來模擬我們所需要的 VM 環境。
 
-## 安裝
+## Qemu
 
 先安裝 Qemu
 
@@ -32,7 +32,9 @@ QEMU 是一種模擬器，它能夠完成使用者程式模擬和系統虛擬化
 brew install qemu
 ```
 
-接著設定 Qemu socket_vvmnet
+## socket_vmnet
+為了 Qemu 的網路驅動有兩個選項，`socket_vmnet` 跟 `builtin`。在 minikube 的官網指南說 `socket_vmnet` 可以給我們最完整的網路體驗。那我們這邊就安裝 socket_vmnet 吧 😂
+接著設定 Qemu socket_vmnet
 
 ```bash
 brew install socket_vmnet
@@ -48,3 +50,4 @@ minikube start --driver qemu --network socket_vmnet
 
 ## 參考資料
 [How to Setup Minikube on MAC M1/M2](https://devopscube.com/minikube-mac/)
+[Minikube Qemu Driver](https://minikube.sigs.k8s.io/docs/drivers/qemu/)
