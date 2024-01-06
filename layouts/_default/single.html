@@ -112,7 +112,28 @@
     {{ end }}
   </footer>
 </article>
-<div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="b1025308-dbec-48ac-9a07-31ae9331701b"
-  data-page-id="{{ .File.UniqueID }}" data-page-url="{{ .Permalink }}" data-page-title="{{ .Title }}"></div>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="b1025308-dbec-48ac-9a07-31ae9331701b"
+  data-page-id="{{ .RelPermalink }}"
+  data-page-url="{{ .RelPermalink }}"
+  data-page-title="{{ .Title }}"
+></div>
+<script>
+  window.CUSDIS_LOCALE = {
+    "powered_by": "評論由 Cusdis 提供",
+    "post_comment": "發送",
+    "loading": "加載中",
+    "email": "郵箱地址 (可選)",
+    "nickname": "暱稱",
+    "reply_placeholder": "回覆内容...",
+    "reply_btn": "回覆",
+    "sending": "發送中...",
+    "mod_badge": "管理員",
+    "content_is_required": "内容不能為空",
+    "nickname_is_required": "暱稱不能為空",
+    "comment_has_been_sent": "評論已發送，管理員審核通過後會展示"
+  }
+</script>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 {{ end }}
