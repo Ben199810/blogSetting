@@ -11,15 +11,15 @@ description: "紀錄 SR 提供的 annotions"
 ## 解決方式-手動
 在 GCP 上面，使用 LoadBalance 的 SVC 會被分類在負載平衡。我們可以先找 SVC，進入頁面後，負載均衡的編號。
 
-![](/img/k8s/journals/svc-id.png)
+![](/img/k8s/journals/loadbalance-id.png)
 
 上面有一個編輯鍵
 
-![](/img/k8s/journals/svc-id-1.png)
+![](/img/k8s/journals/loadbalance-edit.png)
 
 在前端設定的部分可以開啟 `全域存取權`
 
-![](/img/k8s/journals/svc-id-2.png)
+![](/img/k8s/journals/loadbalance-global-access.png)
 
 ## k8s Setting
 

@@ -1,10 +1,9 @@
 ---
-title: "Ingress Controller 簡介"
+title: "Ingress Nginx 簡介"
 date: 2023-08-19
 draft: false
 description: "k8s ingress controller 簡單介紹與安裝"
 tags: ["k8s", "ingress"]
-
 ---
 ## 前言
 隨著系統架構可能日益龐大，可能會使用複數的 ingress 來做進入服務的區分。以防止在 ingress 異常的時候，會影響全體的服務使用。缺點是複數的 ingress 需要使用靜態 IP。在 GCP 的服務上，每保留一組靜態 IP 服務就是增加成本。接著會介紹 ingress controller 這項服務用於管理所有的 ingress。
@@ -12,8 +11,8 @@ tags: ["k8s", "ingress"]
 上一篇文章中有提到 ingress，如果想瞭解 ingress 可以先參考或預習這篇文章。
 {{< article link="/posts/k8s/ingress/" >}} 
 
-## Nginx Ingress Controller
-這篇文章要講解的 Nginx Ingress Controller 結合了 Ingress 的簡潔並支援 Nginx 相關的擴充功能，讓我們能更好的管理所有的 ingress，下面會簡單提到 nginx 以及 ingress 優點。
+## Ingress Nginx
+這篇文章要講解的 Ingress Nginx 結合了 Ingress 的簡潔並支援 Nginx 相關的擴充功能，讓我們能更好的管理所有的 ingress，下面會簡單提到 nginx 以及 ingress 優點。
 
 ### Nginx 介紹
 nginx 是一款高效能、耐用、且功能強大的 loadBalance 及 webServer。也擁有很高的市佔率。
