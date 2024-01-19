@@ -59,6 +59,8 @@ RUN ["executable", "param1", "param2"]
 ### CMD
 CMD 用來在 container 啟動時，執行的指令。一個 Dockerfile 只能有一個 `CMD` 這很重要。如果一個 Dockerfile 有多個 CMD，只有最後一行 CMD 會被執行。
 
+⭐️ 通常也會當作 ENTRYPOINT 指令執行時的參數。
+
 如果使用者在使用 image 時，有指定啟動指令，也會覆蓋 `CMD`
 
 ```dockerfile
@@ -73,6 +75,8 @@ ENTRYPOINT 用於 container 啟動之後執行的指令，並不會被 docker ru
 {{< /alert >}}
 
 Dockerfile 中也只能有一個 `ENTRYPOINT`，如果一份 dockerfile 中有多個，只有最後一個會生效。
+
+💼 [官方文件](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact) 有提供表格來對比 CMD 跟 ENTRYPOINT 之間的交互關係。
 
 ### EXPOSE
 docker container 對外開放的埠號，提供外界使用。
