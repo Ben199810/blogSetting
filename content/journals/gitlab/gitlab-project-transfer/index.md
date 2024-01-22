@@ -1,7 +1,7 @@
 ---
 title: "gitlab 專案搬遷"
 date: 2023-11-27
-draft: 
+draft: true
 description: "在2023-10 ~ 11月之間，大型專案搬遷遇到的問題及從中學會的技能"
 tags: ["gitlab"]
 ---
