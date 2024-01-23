@@ -38,7 +38,7 @@ Templates 下面有兩種檔案，一種是 Yaml 一種是 Tpl
 
 :one: 生成 yaml 輸出的模板文件在使用擴展名 .yaml
 
-:two: 擴展名 .tpl 可以用於生成自訂的模板文件 :point_right: 很實用 :star: :star: :star:
+:two: 擴展名 .tpl 可以用於生成自訂的模板文件 :point_right: 很實用 ⭐️ ⭐️ ⭐️
 
 ```t
 {{- define "nginx.fullname" }}
@@ -64,7 +64,7 @@ serverName: nginx
 serverPort: 80
 ```
 
-:star: 三種潛在的 value 來源:
+⭐️ 三種潛在的 value 來源:
 
 * chart 的 value.yaml
 * helm intall/upgrade -f 提供的 values 文件
@@ -73,15 +73,21 @@ serverPort: 80
 ## 常用指令
 
 ### 一般自訂 Chart 安裝
-:star: **debug**：輸出安裝過程中的詳細資訊 :star: **dry-run**：預覽安裝過程 :star: **atomic**：更新過程中有任何一步驟失敗，回滾到先前狀態
+⭐️ **debug**：輸出安裝過程中的詳細資訊 ⭐️ **dry-run**：預覽安裝過程 ⭐️ **atomic**：更新過程中有任何一步驟失敗，回滾到先前狀態
 ```shell
 helm upgrade --intstall --debug --dry-run [RELEASE_NAME] [CHART_PATH] --atomic
 ```
 
 ### 本機 repo 安裝
-:star: **version**：指定安裝版本
+⭐️ **version**：指定安裝版本
 ```shell
 helm install [RELEASE_NAME] [REPO_NAME]/[CHART_NAME] --version [VERSION]
+```
+
+### 印出部署預覽的 Yaml
+🚨 有時候使用 --dry-run 的時候，因為已經有 release 管理`相同名稱`的資源了。這時候就可以使用 template 預覽，這樣就不會噴錯。
+```shell
+helm template --upgrade [RELEASE_NAME] [REPO_NAME]/[CHART_NAME]
 ```
 
 ### 列出已安裝 Release
