@@ -10,6 +10,8 @@ tags: ["gitlab"]
 因為公司建立一個統一管理 Repo Project 的 Gitlab，所以我們要將自己組內自建 Gitlab 上面的專案搬遷到統一管理的 Gitlab 上面。
 
 搬遷方式：
-
 1️⃣ Gitlab Mirror
 Mirror 就是鏡像倉庫的意思，可以將目前開發人員推送程式碼的儲存庫，再推送到另一個遠端的`儲存庫`實現同步兩個儲存庫的 commit 進度及分支。
+
+2️⃣ Gitlab Clone
+import 專案時，可以選擇用 git clone 的方式，
